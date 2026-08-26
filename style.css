@@ -35,6 +35,7 @@
 
 .header {
     padding: 1%;
+    position: relative;
 }
 
 header .logo {
@@ -48,7 +49,24 @@ header .logo {
     color: var(--color-text-muted);
     text-decoration: none;
     font-size: 18px;
-    margin: 20px;
+    gap: 20px;
+}
+
+.burger {
+    display: none;
+    cursor: pointer;
+    background: none;
+    border: none;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.burger span {
+    display: block;
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    transition: 0.3s;
 }
 
 .hero-text h1 {
@@ -168,7 +186,7 @@ header .logo {
     background-color: var(--color-accent);
     color: var(--color-text-light);
     text-align: center;
-    padding: 10px;
+    padding: 50px 10px;
     margin: 50px 20%;
     border-radius: 8px;
 }
@@ -185,6 +203,7 @@ header .logo {
 .action-button {
     font-size: 15px;
     border: 2px solid #FFFFFF;
+
 }
 
 .action-container {
@@ -194,4 +213,64 @@ header .logo {
     max-width: 800px;
     margin: 0 auto;
     text-align: left;
+}
+
+@media (max-width: 753px) {
+    .hero {
+        flex-direction: column;
+        text-align: center;
+    }
+    .hero picture img {
+        width: 100%;
+        height: auto;
+        margin-top: 25%;
+    }
+
+    .action-container {
+        flex-direction: column;
+        text-align: center;
+    }
+    .action-button {
+        margin-top: 20px;
+    }
+}
+
+@media (max-width: 703px) {
+    .info-cards {
+        align-items: center;
+        flex-wrap: wrap;
+    }
+    .info-item {
+        width: calc(50% - 10px);
+    }
+}
+
+@media (max-width: 648px) {
+    .navigation {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 50px;
+        left:0;
+        width: 100%;
+        text-align: right;
+    }
+    .navigation a {
+        font-size: 12px;
+    }
+    .burger {
+        display: flex;
+        position: absolute;
+
+    }
+    #menu-toggle:checked ~ .navigation {
+        display: flex;
+    }
+}
+
+@media (max-width: 389px){
+    .info-cards {
+        align-items: center;
+        flex-direction: column;
+    }
 }
