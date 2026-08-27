@@ -1,0 +1,40 @@
+.our-cars-content {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.car-list {
+    display: flex;
+    flex-wrap: wrap;
+
+    gap: 20px;
+    justify-content: left;
+}
+
+.car-item {
+    flex: 1 1 calc(33.33% - 20px);
+
+    height: 400px;
+    
+    box-shadow: 0 0 5px var(--color-accent);
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    text-align: center;
+}
+
+.car-image {
+
+    width: 100%;
+
+    overflow: hidden;
+    
+}
+
+.car-image>img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+
+}
