@@ -216,6 +216,9 @@ ul {
 }
 
 .service-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   background-color: #ffffff;
   border: 1px solid var(--color-bg-grey);
   border-radius: 12px;
