@@ -303,8 +303,8 @@ header .logo {
         display: none;
         flex-direction: column;
         position: absolute;
-        top: 50px;
-        left:0;
+        top: 80px;
+        left: 3px;
         width: 100%;
         text-align: right;
     }
@@ -314,7 +314,7 @@ header .logo {
     .burger {
         display: flex;
         position: absolute;
-        right:2px;
+        right:4px;
     }
     #menu-toggle:checked ~ .navigation {
         display: flex;
