@@ -1,3 +1,6 @@
+body{
+    margin: 0;
+}
 :root {
     --color-bg-dark: #1F2937;
     --color-bg-grey: #E5E7EB;
@@ -11,6 +14,7 @@
     font-family: 'Roboto';
     src: url(fonts/Roboto-VariableFont_wdth\,wght.ttf) format('truetype');
 }
+
 @font-face {
     font-family: 'RobotoItalic';
     src: url(fonts/Roboto-Italic-VariableFont_wdth\,wght.ttf) format('truetype');
@@ -93,6 +97,7 @@ header .logo {
         opacity: 0;
         transform: translateY(120px);
     }
+
     to {
         opacity: 1;
         transform: translateY(0);
@@ -283,6 +288,7 @@ header .logo {
         flex-direction: column;
         text-align: center;
     }
+
     .action-button {
         margin-top: 20px;
     }
@@ -293,35 +299,78 @@ header .logo {
         align-items: center;
         flex-wrap: wrap;
     }
+
     .info-item {
         width: calc(50% - 10px);
     }
 }
 
 @media (max-width: 648px) {
+
+    .header {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        margin: 0;
+        padding: 10px 20px;
+        z-index: 1000;
+        background-color: var(--color-bg-dark);
+        box-sizing: border-box;
+    }
     .navigation {
         display: none;
         flex-direction: column;
         position: absolute;
-        top: 80px;
-        left: 3px;
+        top: 50px;
+        left: 0;
         width: 100%;
         text-align: right;
     }
+
     .navigation a {
         font-size: 12px;
     }
+
     .burger {
         display: flex;
         position: absolute;
-        right:4px;
+        right: 30px;
     }
-    #menu-toggle:checked ~ .navigation {
+
+    #menu-toggle:checked~.navigation {
         display: flex;
+        justify-content: center;
+        align-items: center;
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 1001;
+        width: 100%;
+        height: 100vh;
+        background-color: var(--color-bg-dark);
+
+
+    }
+
+    #menu-toggle:checked~.burger span:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+    }
+
+    #menu-toggle:checked~.burger span:nth-child(2) {
+        opacity: 0;
+    }
+
+    #menu-toggle:checked~.burger span:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
+    }
+
+    #menu-toggle:checked~.burger {
+        z-index: 1002;
     }
 }
 
-@media (max-width: 389px){
+@media (max-width: 389px) {
     .info-cards {
         align-items: center;
         flex-direction: column;
@@ -339,4 +388,9 @@ blockquote {
     animation: fade-in-up 0.8s ease-out both;
     animation-timeline: view();
     animation-range: entry 0% entry 35%;
+}
+
+a.active {
+    color: var(--color-text-light);
+    border-bottom: 2px solid var(--color-accent);
 }
