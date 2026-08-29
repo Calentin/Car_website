@@ -57,66 +57,7 @@ ul {
   background-color: var(--color-bg-dark);
 }
 
-/* ---------- Header / Nav ---------- */
-.header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 24px 40px;
-  position: relative;
-}
-
-.brand-link {
-  display: inline-flex;
-  align-items: center;
-}
-
-.brand-link img {
-  width: 130px;
-  height: auto;
-}
-
-.navigation {
-  display: flex;
-  gap: 32px;
-}
-
-.navigation a {
-  color: var(--color-text-muted);
-  font-size: 16px;
-  font-weight: 500;
-  transition: color 0.2s ease;
-}
-
-.navigation a:hover,
-.navigation a[aria-current="page"] {
-  color: var(--color-text-light);
-}
-
-.navigation a[aria-current="page"] {
-  border-bottom: 2px solid var(--color-accent);
-  padding-bottom: 4px;
-}
-
-/* Burger menu (hidden on desktop) */
-.burger-toggle {
-  display: none;
-}
-
-.burger {
-  display: none;
-  flex-direction: column;
-  gap: 5px;
-  cursor: pointer;
-  z-index: 20;
-}
-
-.burger span {
-  width: 26px;
-  height: 3px;
-  background-color: var(--color-text-light);
-  border-radius: 2px;
-}
+/* Header, nav and burger menu now come from the shared style.css */
 
 /* ---------- Services Hero ---------- */
 .services-hero {
@@ -523,69 +464,9 @@ ul {
   }
 }
 
-@media (max-width: 700px) {
+@media (max-width: 776px) {
   .services-hero {
     margin-top: 5rem;
-  }
-
-  .header {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    margin: 0;
-    padding: 10px 20px;
-    z-index: 1000;
-    background-color: var(--color-bg-dark);
-    box-sizing: border-box;
-  }
-  .navigation {
-    display: none;
-    flex-direction: column;
-    position: absolute;
-    top: 50px;
-    left: 0;
-    width: 100%;
-    text-align: right;
-  }
-
-  .navigation a {
-    font-size: 12px;
-  }
-
-  .burger {
-    display: flex;
-    position: absolute;
-    right: 30px;
-  }
-
-  #menu-toggle:checked ~ .navigation {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: fixed;
-    top: 0;
-    left: 0;
-    z-index: 1001;
-    width: 100%;
-    height: 100vh;
-    background-color: var(--color-bg-dark);
-  }
-
-  #menu-toggle:checked ~ .burger span:nth-child(1) {
-    transform: translateY(8px) rotate(45deg);
-  }
-
-  #menu-toggle:checked ~ .burger span:nth-child(2) {
-    opacity: 0;
-  }
-
-  #menu-toggle:checked ~ .burger span:nth-child(3) {
-    transform: translateY(-8px) rotate(-45deg);
-  }
-
-  #menu-toggle:checked ~ .burger {
-    z-index: 1002;
   }
 
   .services-cta {

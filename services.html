@@ -7,30 +7,27 @@
       name="description"
       content="Carspot services — search, test drive, finance and trade-in your next car with clear, honest guidance."
     />
+    <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="services.css" />
     <title>Carspot | Services</title>
   </head>
   <body class="main-content services-page">
-    <header class="header container">
-      <a href="./index.html" class="brand-link" aria-label="Carspot home">
-        <img src="imagess/Carspot-logo.png" alt="Carspot logo" />
-      </a>
-      <input type="checkbox" id="menu-toggle" class="burger-toggle" />
-      <label
-        for="menu-toggle"
-        class="burger"
-        aria-label="Toggle navigation menu"
-      >
-        <span></span>
-        <span></span>
-        <span></span>
-      </label>
-      <nav class="navigation" aria-label="Main navigation">
-        <a href="./index.html">Home</a>
-        <a href="./services.html" aria-current="page">Services</a>
-        <a href="./ourCars.html">Our cars</a>
-      </nav>
-    </header>
+    <div class="container">
+      <header class="header">
+        <img src="./imagess/Carspot-logo.png" alt="Carspot logo">
+        <input type="checkbox" id="menu-toggle" class="burger-toggle">
+        <label for="menu-toggle" class="burger">
+          <span></span>
+          <span></span>
+          <span></span>
+        </label>
+        <nav class="navigation">
+          <a href="./index.html">Home</a>
+          <a href="./services.html" class="active">Services</a>
+          <a href="./ourCars.html">Our Cars</a>
+        </nav>
+      </header>
+    </div>
 
     <main class="container">
       <!-- Hero -->
