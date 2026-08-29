@@ -1,1 +1,106 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <title>Our website</title>
+  </head>
+  <body class="main-content">
+    <header class="header container">
+      <picture class="logo">
+        <source media="width=device-width" srcset="mobile-image.jpg" />
+        <img src="desktop-image.jpg" alt="Our website" />
+      </picture>
+      <input type="checkbox" id="menu-toggle" class="burger-toggle" />
+      <label for="menu-toggle" class="burger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </label>
+      <nav class="navigation">
+        <a href="#">Home</a>
+        <a href="#">Services</a>
+        <a href="#">About</a>
+      </nav>
+    </header>
+    <main>
+      <section class="hero">
+        <div class="hero-text">
+          <h1>This website is awesome</h1>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua.
+          </p>
+          <button>Sign Up</button>
+        </div>
+        <picture>
+          <source media="width=device-width" srcset="mobile-hero-image.jpg" />
+          <img
+            src="desktop-hero-image.jpg"
+            alt="This is a placeholder for an image."
+          />
+        </picture>
+      </section>
 
+      <section class="info">
+        <h2>Some random information.</h2>
+        <div class="info-cards">
+          <div class="info-item">
+            <div class="info-card">
+              <img src="card1-image.jpg" alt="Card 1 image" />
+            </div>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+          </div>
+          <div class="info-item">
+            <div class="info-card">
+              <img src="card2-image.jpg" alt="Card 2 image" />
+            </div>
+            <p>
+              Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            </p>
+          </div>
+          <div class="info-item">
+            <div class="info-card">
+              <img src="card3-image.jpg" alt="Card 3 image" />
+            </div>
+            <p>
+              Ut enim ad minim veniam, quis nostrud exercitation ullamco
+              laboris.
+            </p>
+          </div>
+          <div class="info-item">
+            <div class="info-card">
+              <img src="card4-image.jpg" alt="Card 4 image" />
+            </div>
+            <p>Duis aute irure dolor in reprehenderit in voluptate.</p>
+          </div>
+        </div>
+      </section>
+      <section class="citations">
+        <blockquote>
+          This is an inspiring quote, or a testimonial from a happy customer.
+          Maybe it's just filling up space, or maybe people will actually read
+          it. Who knows? All I know is that it looks nice.
+          <cite class="author">-Thor</cite>
+        </blockquote>
+      </section>
+
+      <section class="call-to-action">
+        <div class="action-container">
+          <div>
+            <h3>Call to action! It's time to get started!</h3>
+            <p>
+              Don't wait any longer. Join us today and experience the
+              difference!
+            </p>
+          </div>
+          <button class="action-button">Sign Up</button>
+        </div>
+      </section>
+    </main>
+    <footer class="footer">
+      <p>&copy; 2026 Our Website. All rights reserved.</p>
+    </footer>
+  </body>
+</html>
