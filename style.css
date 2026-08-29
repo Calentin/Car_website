@@ -42,21 +42,9 @@ body{
     gap: 60px;
 }
 
-.header {
-    padding: 1%;
-    position: relative;
-}
-
 .header img {
     width: 220px;
     height: auto;
-}
-
-header .logo {
-    width: 100px;
-    height: auto;
-    font-size: 24px;
-    color: var(--color-text-light);
 }
 
 .navigation a {
@@ -305,7 +293,7 @@ header .logo {
     }
 }
 
-@media (max-width: 648px) {
+@media (max-width: 776px) {
 
     .header {
         position: fixed;
@@ -318,6 +306,11 @@ header .logo {
         background-color: var(--color-bg-dark);
         box-sizing: border-box;
     }
+
+    .header img {
+        width: 140px;
+    }
+
     .navigation {
         display: none;
         flex-direction: column;
